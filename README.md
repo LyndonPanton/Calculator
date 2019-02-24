@@ -1,4 +1,4 @@
-# Todo List
+# Calculator
 
 ### How to start
 > 1. To open the app go to the project's download folder
