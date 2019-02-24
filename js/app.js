@@ -97,7 +97,7 @@ function press() {
 			if (this.textContent == Number(this.textContent)) {
 				calcString = `${calcString}${this.textContent}`;
 			} else if (this.textContent == "+" || this.textContent == "-" || this.textContent == "x" || this.textContent == "/") {
-				if (calcString[calcString.length - 1] == "+" || calcString[calcString - 1] == "-" || calcString[calcString - 1] == "x" || calcString[calcString - 1] == "/" || calcString[calcString - 1] == ".") {
+				if (calcString[calcString.length - 1] == "+" || calcString[calcString.length - 1] == "-" || calcString[calcString.length - 1] == "x" || calcString[calcString.length - 1] == "/" || calcString[calcString.length - 1] == "." || display.textContent == "") {
 					flash();
 				} else {
 					calcString = `${calcString}${this.textContent}`;
@@ -107,6 +107,7 @@ function press() {
 				if (pointAllowed) {
 					calcString = `${calcString}.`;
 					pointAllowed = false;
+				} else {
 					flash();
 				}
 			} else {
