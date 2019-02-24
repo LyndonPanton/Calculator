@@ -24,6 +24,9 @@ function press() {
 		case "mr":
 			break;
 		case "C":
+			calcString = ``;
+			display.textContent = calcString;
+			pointedAllowed = true;
 			break;
 		case "<=":
 			break;
