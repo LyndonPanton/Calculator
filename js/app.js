@@ -5,6 +5,9 @@ let display = document.getElementById("display");
 let info = document.getElementById("info");
 let close = document.getElementById("close");
 
+info.addEventListener("click", show);
+close.addEventListener("click", hide);
+
 let calcString = "";
 let memoryValue = 0;
 let pointAllowed = true; 
@@ -21,6 +24,16 @@ function flash() {
 	setTimeout(function() {
 		display.style.backgroundColor = "#FFFFFF";
 	}, 100);
+}
+
+function hide() {
+	let modal  = document.getElementById("modal");
+	modal.style.display = "none";
+	document.body.style.backgroundColor = "#FFFFFF";
+
+	for (let i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener("click", press);
+	}
 }
 
 function press() {
@@ -101,5 +114,15 @@ function press() {
 			}
 
 			display.textContent = calcString;
+	}
+}
+
+function show() {
+	let modal = document.getElementById("modal");
+	modal.style.display = "block";
+	document.body.style.backgroundColor = "#DDDDDD";
+
+	for (let i = 0; i < buttons.length; i++) {
+		buttons[i].removeEventListener("click", press);
 	}
 }
