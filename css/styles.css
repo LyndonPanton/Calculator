@@ -72,6 +72,10 @@ td {
 	background-color: #EEEEEE;
 }
 
+#footer {
+	text-align: center;
+}
+
 #info {
 	display: block;
 	width: 15px;
