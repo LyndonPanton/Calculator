@@ -34,6 +34,15 @@ function press() {
 			}
 			break;
 		case "=":
+			if (calcString[calcString.length - 1] == "+" || calcStrin[calcString.length - 1] == "-" || calcString[calcString.length - 1] == "x" || calcString[calcString.length - 1] == "/") {
+
+			} else {
+				let timesRegex = /x/gi;
+				calcString = calcString.replace(timesRegex , "*");
+
+				display.textContent = eval(calcString);
+				calcString = display.textContent;
+			}
 			break;
 		default:
 			if (this.textContent == Number(this.textContent)) {
