@@ -56,7 +56,7 @@ function press() {
 
 				} else {
 					calcString = `${calcString}${this.textContent}`;
-					pointAllowed;
+					pointAllowed = true;
 				}
 			} else if (this.textContent == ".") {
 				if (pointAllowed) {
