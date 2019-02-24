@@ -1,0 +1,91 @@
+::-webkit-scrollbar {
+    background: transparent;    
+}
+
+h1 {
+    text-align: center;
+}
+
+table, tr, td {
+	text-align: center;
+}
+
+table {
+	border: 1px #000000 solid;
+	border-radius: 5px;
+}
+
+td {
+	border: 1px #DDDDDD solid;
+}
+
+.button {
+	cursor: default;
+}
+
+#add {
+	color: #6495ED;
+	background-color: #EEEEEE;
+}
+
+#c {
+	color: #6495ED;
+	background-color: #EEEEEE;
+}
+
+#backspace {
+	color: #6495ED;
+	background-color: #EEEEEE;
+}
+
+#calculator {
+	text-align: center;
+	margin: 10% auto;
+	font-size: 40px;
+}
+
+#display {
+	text-align: right;
+	height: 50px;
+	overflow-y: scroll;
+}
+
+#divide {
+	color: #6495ED;
+	background-color: #EEEEEE;
+}
+
+#madd {
+	color: #A9A9A9;
+	background-color: #EEEEEE;
+}
+
+#multiple {
+	color: #6495ED;
+	background-color: #EEEEEE;
+}
+
+#mc {
+	color: #A9A9A9;
+	background-color: #EEEEEE;
+}
+
+#mr {
+	color: #A9A9A9;
+	background-color: #EEEEEE;
+}
+
+#msubtract {
+	color: #A9A9A9;
+	background-color: #EEEEEE;
+}
+
+#result {
+	color: #FFFFFF;
+	background-color: royalblue;
+}
+
+#subtract {
+	color: #6495ED;
+	background-color: #EEEEEE;
+}
