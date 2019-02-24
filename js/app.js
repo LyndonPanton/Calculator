@@ -28,9 +28,28 @@ function press() {
 		case "<=":
 			break;
 		case "%":
+			if (display.textContent !== "") {
+				display.textContent = eval(display.textContent) / 100;
+				calcString = display.textContent;
+			}
 			break;
 		case "=":
 			break;
 		default:
+			if (this.textContent == Number(this.textContent)) {
+				calcString = `${calcString}${this.textContent}`;
+			} else if (this.textContent == "+" || this.textContent == "-" || this.textContent == "x" || this.textContent == "/") {
+				if (calcString[calcString.length - 1] == "+" || calcString[calcString - 1] == "-" || calcString[calcString - 1] == "x" || calcString[calcString - 1] == "/" || calcString[calcString - 1] == ".") {
+
+				} else {
+					calcString = `${calcString}${this.textContent}`;
+				}
+			} else if (this.textContent == ".") {
+
+			} else {
+				calcString = `${calcString}${this.textContent}`;
+			}
+
+			display.textContent = calcString;
 	}
 }
