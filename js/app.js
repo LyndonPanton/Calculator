@@ -6,6 +6,7 @@ let info = document.getElementById("info");
 let close = document.getElementById("close");
 
 let calcString = "";
+let memoryValue = 0;
 let pointAllowed = true; 
 
 let buttons = document.getElementsByClassName("button");
@@ -17,12 +18,25 @@ for (let i = 0; i < buttons.length; i++) {
 function press() {
 	switch(this.textContent) {
 		case "mc":
+			memoryValue = 0;
 			break;
 		case "m+":
+			if (!isNaN(calcString[calcString.length - 1]) || calcString[calcString.length - 1] == ".") {
+				memoryValue = memoryValue + eval(display.textContent);
+			} else {
+
+			}
 			break;
 		case "m-":
+			if (!isNaN(calcString[calcString.length - 1]) || calcString[calcString.length - 1] == ".") {
+				memoryValue = memoryValue - eval(display.textContent);
+			} else {
+				
+			}		
 			break;
 		case "mr":
+			calcString = memoryValue;
+			display.textContent = calcString;
 			break;
 		case "C":
 			calcString = ``;
