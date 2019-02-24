@@ -6,6 +6,7 @@ let info = document.getElementById("info");
 let close = document.getElementById("close");
 
 let calcString = "";
+let pointAllowed = true; 
 
 let buttons = document.getElementsByClassName("button");
 
@@ -26,7 +27,7 @@ function press() {
 		case "C":
 			calcString = ``;
 			display.textContent = calcString;
-			pointedAllowed = true;
+			pointAllowed = true;
 			break;
 		case "<=":
 			break;
@@ -55,9 +56,13 @@ function press() {
 
 				} else {
 					calcString = `${calcString}${this.textContent}`;
+					pointAllowed;
 				}
 			} else if (this.textContent == ".") {
-
+				if (pointAllowed) {
+					calcString = `${calcString}.`;
+					pointAllowed = false;
+				}
 			} else {
 				calcString = `${calcString}${this.textContent}`;
 			}
